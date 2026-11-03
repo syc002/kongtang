@@ -131,89 +131,30 @@ dialog .cube{width:28px;height:28px}
 }
 @media(max-width:800px) and (max-height:720px){.scene.closing{gap:7px}.closing h2{font-size:24px}.closing>p{font-size:9px;line-height:1.6}.action-card{padding:9px;gap:0}.action-card svg{display:none}.action-moment{font-size:7px;margin-bottom:4px}.action-card h3{font-size:12px;margin-bottom:4px}.action-card p{font-size:8px;line-height:1.6}.closing .review-strip{padding:8px 10px;gap:4px}.closing .review-strip label,.closing .review-strip output{font-size:8px}.closing .closing-links .primary{padding:9px 12px;font-size:9px}.closing .closing-links>a:last-child{font-size:8px}}
 
+body.cover-pending{background:#f6e4c7 url('assets/cover-gradient.svg') center/cover no-repeat}
+body.cover-pending>.topbar,body.cover-pending>main,body.cover-pending>.page-controls{visibility:hidden}
+.intro-cover{position:fixed;inset:0;z-index:100;isolation:isolate;overflow:hidden}
+.cover-backdrop{position:absolute;inset:0;background:#f6e4c7 url('assets/cover-gradient.svg') center/cover no-repeat;z-index:0}
+.cover-title{position:fixed;left:12vw;top:43vh;transform:translateY(-50%);width:44vw;height:auto;margin:0;font-size:clamp(48px,4.4vw,118px);font-weight:800;line-height:1.24;letter-spacing:-3px;color:#523829;z-index:2;pointer-events:none}
+.cover-title .sugar-title:after{height:5px;bottom:-7px}
+.cover-drinks{position:fixed;left:43vw;top:9vh;width:44vw;height:82vh;object-fit:contain;z-index:2;pointer-events:none;filter:drop-shadow(0 22px 23px #82542c18)}
+.cover-enter{position:absolute;inset:0;z-index:3;width:100%;height:100%;padding:0;border:0;border-radius:0;background:transparent;cursor:pointer}
+.cover-enter:focus-visible{outline:2px solid #a86739;outline-offset:-14px}
+.cover-enter:disabled{cursor:default}
+.intro-cover[data-phase=entering] .cover-enter{pointer-events:none}
+.intro-title-anchor,.intro-drinks-anchor{visibility:hidden}
+.hero-art>.hero-drinks{width:100%;height:100%;min-height:0;max-width:100%;max-height:100%;object-fit:contain;display:block;filter:drop-shadow(0 16px 19px #82542c12)}
+@media(max-width:800px){.cover-title{left:8vw;top:22vh;width:84vw;font-size:clamp(38px,10.5vw,70px);line-height:1.22;letter-spacing:-2px}.cover-drinks{left:8vw;top:35vh;width:82vw;height:59vh}.cover-title .sugar-title:after{height:3px;bottom:-4px}}
+@media(max-width:800px) and (max-height:720px){.cover-title{top:22vh;font-size:clamp(36px,10.5vw,56px)}.cover-drinks{top:34vh;height:61vh}}
+
 </style>
+<link id="cover-image-preload" rel="preload" as="image" href="assets/cover-drinks-3d.png">
 </head>
 <body id="top">
 <header class="topbar"><nav><a class="brand" href="#top"><i>糖</i>看见隐形糖</a><div class="links"><a href="#data">数据观察</a><a href="#drinks">饮品里的糖</a><a href="#impact">身体的信号</a><a href="#guide">控糖指南</a></div><a class="nav-cta" href="#drinks">我的饮品有多甜 ↗</a></nav><div id="progress"></div></header>
 <main>
 <div class="wrap"><div class="hero"><div class="hero-copy"><div class="eyebrow">交互新闻 · SUGAR, IN SIGHT</div><h1>今天，<br>你<span style="color:var(--red)">“</span><em>控糖</em><span style="color:var(--red)">”</span>了吗？</h1><p>从一杯饮品出发，读懂隐形糖与我们的健康。<br>那些不经意的甜，正在怎样影响你？</p><a class="primary" href="#drinks">揭开饮品的甜蜜秘密 <span>↗</span></a><div class="subcaption"><span></span>向下滚动，开启一场关于糖的探索</div></div><div class="hero-art">
-<svg viewBox="0 0 640 640" role="img" aria-label="暖色立体插画：珍珠奶茶、可乐与方糖" xmlns="http://www.w3.org/2000/svg">
- <defs>
-  <radialGradient id="hero-halo"><stop stop-color="#fff9e9"/><stop offset="1" stop-color="#f0dfbf"/></radialGradient>
-  <linearGradient id="hero-tea" x1="0" x2="1"><stop stop-color="#ae7144"/><stop offset=".27" stop-color="#dfb780"/><stop offset=".65" stop-color="#f0d3a7"/><stop offset="1" stop-color="#b98250"/></linearGradient>
-  <linearGradient id="hero-glass" x1="0" x2="1"><stop stop-color="#fff9e7" stop-opacity=".6"/><stop offset=".45" stop-color="#fff9e7" stop-opacity=".05"/><stop offset="1" stop-color="#fff9e7" stop-opacity=".4"/></linearGradient>
-  <linearGradient id="hero-cola" x1="0" x2="1"><stop stop-color="#a93625"/><stop offset=".22" stop-color="#df5638"/><stop offset=".54" stop-color="#ed7450"/><stop offset=".83" stop-color="#d44c32"/><stop offset="1" stop-color="#b53c29"/></linearGradient>
-  <linearGradient id="hero-metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff8df"/><stop offset=".35" stop-color="#d9d9c6"/><stop offset=".68" stop-color="#f4eed8"/><stop offset="1" stop-color="#a9b29c"/></linearGradient>
-  <linearGradient id="hero-straw" x1="0" x2="1"><stop stop-color="#475e46"/><stop offset=".45" stop-color="#809472"/><stop offset="1" stop-color="#4f644b"/></linearGradient>
-  <radialGradient id="hero-pearl" cx=".32" cy=".25"><stop stop-color="#79553a"/><stop offset=".65" stop-color="#493121"/><stop offset="1" stop-color="#35261d"/></radialGradient>
-  <filter id="hero-soft-shadow" x="-50%" y="-100%" width="200%" height="300%"><feGaussianBlur stdDeviation="11"/></filter>
-  <clipPath id="hero-cup-clip"><path d="M159 229H348L321 500Q256 528 189 500Z"/></clipPath>
- </defs>
- <circle cx="317" cy="331" r="252" fill="url(#hero-halo)"/>
- <circle cx="317" cy="331" r="274" fill="none" stroke="#c7b58e" stroke-opacity=".5" stroke-dasharray="2 11"/>
- <path d="M102 235C111 178 147 131 196 109M469 544C517 515 552 474 568 429" fill="none" stroke="#b1b895" stroke-width="2" stroke-linecap="round"/>
- <ellipse cx="331" cy="531" rx="190" ry="23" fill="#8f603c" opacity=".2" filter="url(#hero-soft-shadow)"/>
- <g transform="rotate(-9 260 346)">
-  <rect x="276" y="91" width="17" height="157" rx="5" fill="url(#hero-straw)"/>
-  <path d="M281 100V223" stroke="#b0bd93" stroke-opacity=".65" stroke-width="3" stroke-linecap="round"/>
-  <path d="M159 229H348L321 500Q256 528 189 500Z" fill="url(#hero-tea)" stroke="#ad8057" stroke-width="2"/>
-  <g clip-path="url(#hero-cup-clip)">
-   <path d="M155 234H351L343 292Q249 311 164 290Z" fill="#efd3a7"/>
-   <path d="M168 296Q249 312 340 296" fill="none" stroke="#fff0d2" stroke-width="6" opacity=".8"/>
-   <g fill="#fff3d7" fill-opacity=".25" stroke="#fff5de" stroke-opacity=".4" stroke-width="2">
-    <rect x="185" y="251" width="39" height="31" rx="7" transform="rotate(14 204 266)"/>
-    <rect x="257" y="254" width="45" height="33" rx="7" transform="rotate(-12 279 270)"/>
-   </g>
-   <path d="M194 505Q189 472 221 447T265 466T313 441" fill="none" stroke="#946039" stroke-width="14" stroke-opacity=".22"/>
-   <g fill="url(#hero-pearl)">
-    <circle cx="210" cy="478" r="13"/><circle cx="237" cy="492" r="14"/><circle cx="268" cy="478" r="13"/>
-    <circle cx="295" cy="489" r="15"/><circle cx="313" cy="468" r="12"/><circle cx="260" cy="508" r="12"/>
-    <circle cx="200" cy="504" r="12"/><circle cx="231" cy="458" r="11"/><circle cx="288" cy="450" r="11"/>
-   </g>
-   <g fill="#c2986b" opacity=".5"><ellipse cx="207" cy="474" rx="4" ry="2.5"/><ellipse cx="264" cy="474" rx="4" ry="2.5"/><ellipse cx="291" cy="485" rx="4" ry="2.5"/></g>
-   <path d="M172 252L199 485" stroke="#fff9df" stroke-width="10" opacity=".28" stroke-linecap="round"/>
-   <path d="M334 256L313 472" stroke="#fff9df" stroke-width="4" opacity=".22" stroke-linecap="round"/>
-   <path d="M159 229H348L321 500Q256 528 189 500Z" fill="url(#hero-glass)"/>
-  </g>
-  <path d="M155 226Q253 244 352 226L349 241Q253 261 158 241Z" fill="#dfc498" stroke="#a77d56" stroke-width="2"/>
-  <ellipse cx="253" cy="227" rx="101" ry="22" fill="#fff1d2" stroke="#ac855b" stroke-width="2"/>
-  <ellipse cx="253" cy="223" rx="94" ry="16" fill="#ead0a2" stroke="#fdf0d4" stroke-width="3"/>
-  <ellipse cx="286" cy="224" rx="12" ry="4" fill="#c3ac7d"/>
-  <path d="M276 209V231H293V209" fill="url(#hero-straw)"/>
-  <g transform="rotate(2 255 367)">
-   <rect x="199" y="333" width="113" height="79" rx="8" fill="#fff4db" fill-opacity=".94"/>
-   <path d="M216 350H295" stroke="#c8a674" stroke-width="1"/>
-   <text x="255" y="374" text-anchor="middle" fill="#77553a" font-family="Georgia,serif" font-size="23" letter-spacing="2">MILK TEA</text>
-   <text x="255" y="395" text-anchor="middle" fill="#a58255" font-family="sans-serif" font-size="8" letter-spacing="2">A LITTLE LESS SWEET</text>
-  </g>
- </g>
- <g transform="rotate(11 414 416)">
-  <path d="M354 315Q353 304 373 302H457Q477 304 477 315L482 507Q483 527 461 532H373Q351 529 350 510Z" fill="url(#hero-cola)"/>
-  <path d="M369 323L365 500" stroke="#ffbd90" stroke-width="9" opacity=".24" stroke-linecap="round"/>
-  <path d="M469 324L474 500" stroke="#84291d" stroke-width="5" opacity=".2" stroke-linecap="round"/>
-  <ellipse cx="415" cy="309" rx="62" ry="15" fill="url(#hero-metal)" stroke="#a0a88f" stroke-width="2"/>
-  <ellipse cx="415" cy="308" rx="54" ry="10" fill="none" stroke="#a8af9a" stroke-width="1.5"/>
-  <ellipse cx="429" cy="309" rx="13" ry="5" fill="#798a75"/>
-  <path d="M396 301Q391 295 401 293L419 295Q425 298 418 303L405 306Z" fill="#e7e7d1" stroke="#8e9b85" stroke-width="2"/>
-  <path d="M354 389Q412 362 479 383L479 398Q420 380 353 408Z" fill="#ffecd0" opacity=".92"/>
-  <text x="415" y="453" text-anchor="middle" fill="#fff3db" font-family="Georgia,serif" font-size="43" font-style="italic" font-weight="bold" letter-spacing="-2">Cola</text>
-  <text x="415" y="477" text-anchor="middle" fill="#ffdec2" font-family="sans-serif" font-size="9" letter-spacing="3">SWEET MOMENTS</text>
-  <path d="M361 514Q415 535 472 515" stroke="#8e2b20" fill="none" stroke-width="3" opacity=".45"/>
-  <path d="M368 524Q414 539 462 525" stroke="#ec9b6e" fill="none" stroke-width="2" opacity=".55"/>
-  <g fill="#fff4dc" fill-opacity=".35" stroke="#ffe6c7" stroke-opacity=".3">
-   <ellipse cx="370" cy="353" rx="3" ry="5"/><ellipse cx="453" cy="346" rx="4" ry="6"/>
-   <ellipse cx="465" cy="413" rx="2.5" ry="4"/><ellipse cx="366" cy="463" rx="2" ry="3"/>
-   <ellipse cx="449" cy="493" rx="3" ry="4"/><circle cx="391" cy="335" r="2"/>
-  </g>
- </g>
- <g stroke="#d6c5a1" stroke-width="1.5" stroke-linejoin="round">
-  <path d="M119 511L150 498L178 515L146 528Z" fill="#fffdf1"/><path d="M119 511V544L146 561V528Z" fill="#f0e4ca"/><path d="M146 528L178 515V547L146 561Z" fill="#fff5df"/>
-  <path d="M181 551L207 542L230 556L204 568Z" fill="#fffdf1"/><path d="M181 551V578L204 592V568Z" fill="#eadabd"/><path d="M204 568L230 556V582L204 592Z" fill="#fff3d8"/>
-  <path d="M475 225L501 216L524 230L498 241Z" fill="#fffdf1"/><path d="M475 225V252L498 266V241Z" fill="#f0e4ca"/><path d="M498 241L524 230V256L498 266Z" fill="#fff5df"/>
- </g>
- <g fill="#b49a6b" opacity=".55"><circle cx="124" cy="359" r="3"/><circle cx="513" cy="306" r="3"/><circle cx="187" cy="169" r="2"/></g>
- <g fill="none" stroke="#9fa984" stroke-width="2" stroke-linecap="round"><path d="M113 428V442M106 435H120M471 167V179M465 173H477"/></g>
-</svg>
+<img class="hero-drinks" src="assets/cover-drinks-3d.png" alt="3D 奶茶、可乐与方糖" decoding="async" fetchpriority="high">
 <div class="art-tag">一瓶 500ml 可乐 ≈<br><strong>53<span style="font-size:17px">g</span></strong> 糖</div><div class="art-note">甜蜜的背后，藏着多少糖？</div></div></div></div>
 <div class="ticker"><span>看见 <b>INVISIBLE SUGAR</b></span><span>理解 · 每一口甜的分量</span><span>选择 · 更轻盈的日常</span><span>LESS SUGAR, <b>MORE LIFE</b></span></div>
 <div class="wrap"><section id="data"><div class="section-top"><div><div class="kicker"><span>01 /</span> 数据观察</div><h2>关于糖的故事，<br>从一组数据开始。</h2></div><p class="lead">文稿从糖尿病数据切入，提醒我们关注日常饮食与代谢健康。糖尿病受多种因素影响，不能简单归因于“吃糖”。</p></div><div class="chart-panel"><div class="chart-tabs" role="tablist" aria-label="数据图表"><button id="trend-tab" role="tab" aria-selected="true" aria-controls="trend" tabindex="0">患者数量趋势</button><button id="age-tab" role="tab" aria-selected="false" aria-controls="age" tabindex="-1">患病年龄结构</button></div><div id="trend" role="tabpanel" aria-labelledby="trend-tab"><div class="chart-content"><div class="chart-copy"><div class="big-number">1.4<small>亿</small></div><div><h3>文稿中的 2023 年参考值</h3><p>把变化放进时间里，<br>看见健康议题的分量。</p></div></div><div><svg class="chart" viewBox="0 0 640 250" role="img" aria-label="文稿参考数据：2015年0.9亿，2017年1.0亿，2019年1.1亿，2021年1.3亿，2023年1.4亿"><defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#dc6545" stop-opacity=".18"/><stop offset="1" stop-color="#dc6545" stop-opacity="0"/></linearGradient></defs><g stroke="#d3d7c9" stroke-dasharray="3 5"><path d="M40 45H610 M40 95H610 M40 145H610 M40 195H610"/></g><text x="0" y="20">亿人</text><text x="7" y="49">1.5</text><text x="7" y="99">1.3</text><text x="7" y="149">1.1</text><text x="7" y="199">0.9</text><path d="M65 195L195 170L325 145L455 95L585 70V215H65Z" fill="url(#area)"/><path d="M65 195L195 170L325 145L455 95L585 70" fill="none" stroke="#df553a" stroke-width="3"/><g id="chart-points"></g><g text-anchor="middle"><text x="65" y="240">2015</text><text x="195" y="240">2017</text><text x="325" y="240">2019</text><text x="455" y="240">2021</text><text x="585" y="240">2023</text></g></svg><div id="chart-readout" class="chart-readout" aria-live="polite">点击圆点，查看年份与数值</div></div></div><p class="note">数据说明：以上数值来自所提供文稿（2015—2023 年：0.9、1.0、1.1、1.3、1.4 亿），尚未提供原始统计出处，首版仅作图表演示，不作为已核实统计结论。</p></div><div id="age" role="tabpanel" aria-labelledby="age-tab" hidden></div></div></section>
@@ -252,7 +193,7 @@ document.querySelectorAll('[role=tab]').forEach(b=>{b.addEventListener('click',(
 const main=document.querySelector('main');
 const scenes=[document.querySelector('.hero'),document.getElementById('data'),document.getElementById('drinks'),document.getElementById('impact'),document.querySelector('.benefits'),document.getElementById('guide'),document.querySelector('.closing')];
 const sceneIds=['top','data','drinks','impact','benefits','guide','closing'];
-const sceneNames=['封面','数据观察','饮品里的糖','身体的信号','控糖的好处','科学控糖','结语'];
+const sceneNames=['首页','数据观察','饮品里的糖','身体的信号','控糖的好处','科学控糖','结语'];
 const footer=document.querySelector('.footer');
 scenes[6].append(footer);footer.className='closing-foot';
 scenes.forEach((scene,i)=>{scene.classList.add('scene');scene.dataset.page=sceneIds[i];scene.dataset.folio=`0${i+1}`;scene.tabIndex=-1;scene.setAttribute('aria-label',sceneNames[i]);});
@@ -481,6 +422,64 @@ scenes[6].querySelector(':scope>p').innerHTML='四个小改变，都在这里。
 document.querySelector('.closing-links').insertAdjacentHTML('beforebegin','<div class="review-strip"><label><input type="checkbox" data-review>我能区分添加糖与游离糖</label><label><input type="checkbox" data-review>我会按容量换算整瓶糖量</label><label><input type="checkbox" data-review>我选好了一件今天要做的小事</label><output id="review-result" aria-live="polite">阅读自查 0 / 3</output></div>');
 document.querySelectorAll('[data-review]').forEach(input=>input.addEventListener('change',()=>{document.getElementById('review-result').textContent=`阅读自查 ${document.querySelectorAll('[data-review]:checked').length} / 3`;}));
 footer.innerHTML='交互科普<br>资料：WHO、中国居民膳食指南、FDA；饮品示例来自原文估算。<br>仅供科普参考，不能替代专业医疗建议。';
+
+const introTitle=scenes[0].querySelector('h1');
+const introDrinks=document.querySelector('.hero-drinks');
+const titleAnchor=introTitle.cloneNode(true),drinksAnchor=introDrinks.cloneNode(true);
+titleAnchor.classList.add('intro-title-anchor');drinksAnchor.classList.add('intro-drinks-anchor');
+titleAnchor.setAttribute('aria-hidden','true');drinksAnchor.setAttribute('aria-hidden','true');
+introTitle.replaceWith(titleAnchor);introDrinks.replaceWith(drinksAnchor);
+const introCover=document.createElement('section');
+introCover.className='intro-cover';introCover.setAttribute('aria-label','控糖故事封面');
+introCover.innerHTML='<div class="cover-backdrop" aria-hidden="true"></div><button class="cover-enter" aria-label="进入控糖首页"></button>';
+introTitle.classList.add('cover-title');introDrinks.classList.add('cover-drinks');
+introCover.append(introTitle,introDrinks);document.body.append(introCover);
+navigationShells.forEach(element=>{element.inert=true;});
+let introEntering=false;
+async function enterHomepage(){
+ if(introEntering)return false;
+ introEntering=true;
+ const enterButton=introCover.querySelector('.cover-enter');enterButton.disabled=true;
+ const animations=[];
+ const restore=()=>{
+  titleAnchor.replaceWith(introTitle);drinksAnchor.replaceWith(introDrinks);
+  introTitle.classList.remove('cover-title');introDrinks.classList.remove('cover-drinks');
+  introTitle.removeAttribute('style');introDrinks.removeAttribute('style');
+  document.body.classList.remove('cover-pending');
+  animations.forEach(animation=>animation.cancel());introCover.remove();
+  navigationShells.forEach(element=>{element.inert=false;});scenes[0].focus({preventScroll:true});
+ };
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches){restore();return true;}
+ try{
+  if(!introDrinks.complete)await introDrinks.decode().catch(()=>{});
+  const titleFrom=introTitle.getBoundingClientRect(),imageFrom=introDrinks.getBoundingClientRect();
+  const titleTo=titleAnchor.getBoundingClientRect(),imageTo=drinksAnchor.getBoundingClientRect();
+  const titleStyle=getComputedStyle(introTitle),targetStyle=getComputedStyle(titleAnchor);
+  const startType={fontSize:titleStyle.fontSize,lineHeight:titleStyle.lineHeight,letterSpacing:titleStyle.letterSpacing};
+  const endType={fontSize:targetStyle.fontSize,lineHeight:targetStyle.lineHeight,letterSpacing:targetStyle.letterSpacing};
+  const box=rect=>({left:`${rect.left}px`,top:`${rect.top}px`,width:`${rect.width}px`,height:`${rect.height}px`});
+  const play=(element,frames,options)=>{const animation=element.animate(frames,{fill:'both',...options});animations.push(animation);return animation.finished;};
+  Object.assign(introTitle.style,box(titleFrom),{transform:'none'});
+  Object.assign(introDrinks.style,box(imageFrom));
+  const revealNodes=[document.querySelector('.topbar'),...scenes[0].querySelectorAll('.hero-copy > :not(h1)'),...scenes[0].querySelectorAll('.art-tag,.art-note,.journey-strip'),controls];
+  const panel=document.querySelector('.hero-art'),panelStyle=getComputedStyle(panel);
+  const panelColors={backgroundColor:panelStyle.backgroundColor,borderColor:panelStyle.borderColor};
+  document.body.classList.remove('cover-pending');
+  introCover.dataset.phase='entering';
+  const timing={duration:1800,easing:'cubic-bezier(.22,1,.36,1)'};
+  await Promise.all([
+   play(introTitle,[{...box(titleFrom),...startType},{...box(titleTo),...endType}],timing),
+   play(introDrinks,[box(imageFrom),box(imageTo)],timing),
+   play(introCover.querySelector('.cover-backdrop'),[{opacity:1},{opacity:0}],{duration:1000,delay:250,easing:'ease-in-out'}),
+   play(panel,[{backgroundColor:'transparent',borderColor:'transparent'},panelColors],{duration:800,delay:750,easing:'ease-out'}),
+   ...revealNodes.map((node,i)=>play(node,[{opacity:0,transform:'translateY(14px)'},{opacity:1,transform:'translateY(0)'}],{duration:700,delay:650+i*45,easing:'ease-out'}))
+  ]);
+  return true;
+ }catch{
+  return false;
+ }finally{restore();}
+}
+introCover.querySelector('.cover-enter').addEventListener('click',enterHomepage);
 
 </script>
 </body></html>
