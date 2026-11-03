@@ -89,16 +89,131 @@ nav,.scene,.scene.impact-layout,.page-controls{padding-left:clamp(20px,2vw,48px)
 @media(max-width:500px){.age-bar{grid-template-columns:46px minmax(0,1fr) 42px;font-size:9px;gap:4px;padding:2px}.age-bars{gap:2px 12px}.age-track{height:7px}.age-heading{align-items:flex-start}.age-heading h3{font-size:14px}.age-heading p,.age-heading>span{font-size:8px}.age-heading>span{padding:4px 5px}.age-model{gap:7px}.age-key,.age-method{font-size:8px;line-height:1.6}.age-readout{font-size:10px;padding:7px 8px;min-height:33px}}
 @media(max-width:800px) and (max-height:720px){.age-model{gap:5px}.age-bar{padding:1px 2px;font-size:9px}.age-bars{gap:1px 10px}.age-heading h3{font-size:13px}.age-heading p{margin-top:0}.age-readout{font-size:9px;min-height:28px;padding:5px 7px}.age-key,.age-method{font-size:7px}}
 
+dialog{width:min(88vw,1120px);max-width:1120px;min-height:min(380px,70dvh);max-height:calc(100dvh - 64px);padding:clamp(32px,3vw,64px);border-radius:20px;overflow:auto;overscroll-behavior:contain}
+dialog h2{font-size:clamp(28px,1.7vw,44px);line-height:1.45;margin:0 48px 22px 0;color:#65432c;letter-spacing:-.5px}
+.modal-kicker{font-size:clamp(14px,.75vw,19px);line-height:1.6;margin:0 60px 16px 0;color:#8f6038}
+#modal-body{font-size:clamp(18px,1.05vw,26px);line-height:1.9;color:#674b35;overflow-wrap:anywhere}
+#modal-body p{margin:18px 0}
+#modal-body strong{font-size:clamp(48px,3.2vw,82px);color:#a95832}
+#modal-body .modal-label{font-size:clamp(15px,.85vw,21px);line-height:1.8;color:#806247}
+#modal-body .source-list{padding-left:1.4em}
+#modal-body .source-list li{font-size:inherit;line-height:1.8;margin:16px 0}
+dialog .close{width:46px;height:46px;top:20px;right:20px;font-size:30px;background:#fff5e3;color:#805333}
+dialog .action{font-size:clamp(16px,.9vw,22px);padding:14px 24px;margin-top:28px;min-height:48px;background:#ab6238;color:#fff8e9}
+dialog .cubes{gap:10px;margin:24px 0}
+dialog .cube{width:28px;height:28px}
+.hero-art>svg{max-width:100%;max-height:100%}
+.scene.closing{display:grid;grid-template-columns:1fr;grid-template-rows:auto auto auto minmax(0,1fr) auto auto auto;gap:clamp(10px,1.4vh,22px);align-content:stretch;align-items:stretch;text-align:left}
+.closing .eyebrow{grid-column:1;grid-row:1}
+.closing h2{grid-column:1;grid-row:2;font-size:clamp(32px,3.6vw,92px);line-height:1.22}
+.closing>p{grid-column:1;grid-row:3;font-size:clamp(13px,.9vw,23px);padding:0;border:0;line-height:1.7;align-self:start}
+.closing>p br{display:none}
+.action-board{grid-column:1;grid-row:4;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:clamp(12px,1.2vw,28px);min-height:0}
+.action-card{display:grid;grid-template-columns:clamp(70px,8vw,180px) minmax(0,1fr);align-items:center;gap:clamp(14px,1.4vw,34px);padding:clamp(15px,1.4vw,35px);border:1px solid #d5b58c;border-radius:12px;background:#f2dfbf;min-height:0;position:relative;overflow:hidden}
+.action-card:nth-child(2){background:#e9e5cc}.action-card:nth-child(3){background:#f0d9c5}.action-card:nth-child(4){background:#eee3c9}
+.action-card svg{display:block;width:100%;height:100%;max-height:180px;min-height:0}
+.action-copy{min-width:0}.action-moment{display:block;color:#9a6d42;font-size:clamp(10px,.7vw,18px);letter-spacing:1px;margin-bottom:8px}
+.action-card h3{font-size:clamp(20px,1.35vw,35px);line-height:1.4;color:#714a2e;margin:0 0 10px}
+.action-card p{font-size:clamp(13px,.85vw,22px);line-height:1.8;color:#805f44}
+.closing .review-strip{grid-column:1;grid-row:5;margin:0}
+.closing .closing-links{grid-column:1;grid-row:6;margin:0}
+.closing .closing-foot{grid-column:1;grid-row:7;margin:0;font-size:clamp(9px,.65vw,16px);line-height:1.75}
+@media(max-width:800px){
+ dialog{width:calc(100% - 24px);max-width:650px;min-height:0;max-height:calc(100dvh - 28px);padding:28px 22px;border-radius:14px}
+ dialog h2{font-size:24px;margin-right:30px;margin-bottom:18px;line-height:1.5}.modal-kicker{font-size:12px;margin-right:35px;margin-bottom:12px}
+ #modal-body{font-size:16px;line-height:1.85}#modal-body p{margin:15px 0}#modal-body .modal-label{font-size:14px}#modal-body strong{font-size:46px}
+ dialog .close{width:36px;height:36px;right:12px;top:12px;font-size:25px}dialog .action{font-size:16px;padding:12px 18px;margin-top:22px}.source-list li{margin:12px 0}
+ dialog .cube{width:23px;height:23px}dialog .cubes{gap:8px;margin:18px 0}
+ .scene.closing{gap:10px}.closing h2{font-size:29px}.closing h2 br{display:block}.closing>p{font-size:11px;line-height:1.7}.closing>p br{display:block}
+ .action-board{gap:9px}.action-card{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:4px;padding:12px;border-radius:9px}.action-card svg{height:44px;max-height:44px;width:44px;align-self:flex-start}.action-moment{font-size:8px;margin-bottom:4px;letter-spacing:.6px}.action-card h3{font-size:13px;margin:0 0 5px;line-height:1.45}.action-card p{font-size:9px;line-height:1.7}
+ .closing .review-strip{padding:10px 12px;gap:5px}.closing .review-strip label{font-size:9px;line-height:1.6}.closing .review-strip input{width:13px;height:13px}.closing .review-strip output{font-size:9px;padding-top:5px}
+ .closing .closing-links .primary{font-size:10px;padding:10px 13px}.closing .closing-links>a:last-child{font-size:9px}.closing .closing-foot{font-size:7px;line-height:1.65}
+}
+@media(max-width:800px) and (max-height:720px){.scene.closing{gap:7px}.closing h2{font-size:24px}.closing>p{font-size:9px;line-height:1.6}.action-card{padding:9px;gap:0}.action-card svg{display:none}.action-moment{font-size:7px;margin-bottom:4px}.action-card h3{font-size:12px;margin-bottom:4px}.action-card p{font-size:8px;line-height:1.6}.closing .review-strip{padding:8px 10px;gap:4px}.closing .review-strip label,.closing .review-strip output{font-size:8px}.closing .closing-links .primary{padding:9px 12px;font-size:9px}.closing .closing-links>a:last-child{font-size:8px}}
+
 </style>
 </head>
 <body id="top">
 <header class="topbar"><nav><a class="brand" href="#top"><i>糖</i>看见隐形糖</a><div class="links"><a href="#data">数据观察</a><a href="#drinks">饮品里的糖</a><a href="#impact">身体的信号</a><a href="#guide">控糖指南</a></div><a class="nav-cta" href="#drinks">我的饮品有多甜 ↗</a></nav><div id="progress"></div></header>
 <main>
 <div class="wrap"><div class="hero"><div class="hero-copy"><div class="eyebrow">交互新闻 · SUGAR, IN SIGHT</div><h1>今天，<br>你<span style="color:var(--red)">“</span><em>控糖</em><span style="color:var(--red)">”</span>了吗？</h1><p>从一杯饮品出发，读懂隐形糖与我们的健康。<br>那些不经意的甜，正在怎样影响你？</p><a class="primary" href="#drinks">揭开饮品的甜蜜秘密 <span>↗</span></a><div class="subcaption"><span></span>向下滚动，开启一场关于糖的探索</div></div><div class="hero-art">
-<svg viewBox="0 0 530 530" role="img" aria-label="一杯奶茶、一罐汽水和散落的方糖插画"><defs><pattern id="grain" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r=".6" fill="#8c8963" opacity=".14"/></pattern><linearGradient id="tea" x1="0" x2="1"><stop stop-color="#a86b3c"/><stop offset=".5" stop-color="#dbaf7a"/><stop offset="1" stop-color="#bc8755"/></linearGradient><linearGradient id="can" x1="0" x2="1"><stop stop-color="#c9442f"/><stop offset=".45" stop-color="#ee6a49"/><stop offset="1" stop-color="#d54b30"/></linearGradient><filter id="shadow"><feGaussianBlur stdDeviation="9"/></filter></defs><circle cx="272" cy="273" r="213" fill="#ecebdd"/><circle cx="272" cy="273" r="213" fill="url(#grain)"/><circle cx="272" cy="273" r="238" fill="none" stroke="#d9d9c8" stroke-dasharray="3 8"/><ellipse cx="280" cy="447" rx="180" ry="20" fill="#4d3826" opacity=".1" filter="url(#shadow)"/>
-<g transform="rotate(-12 245 285)"><path d="M151 170 L328 170 L306 420 Q245 440 178 420Z" fill="url(#tea)" stroke="#8b654b" stroke-width="2"/><path d="M157 186 L321 186 L316 240 Q239 256 162 237Z" fill="#e8c89d"/><path d="M162 243 Q245 260 316 244" fill="none" stroke="#f4dbc0" stroke-width="4"/><path d="M177 277 L187 390" stroke="#fce0b4" stroke-width="8" opacity=".3"/><g fill="#403125"><circle cx="202" cy="396" r="12"/><circle cx="236" cy="411" r="12"/><circle cx="269" cy="398" r="13"/><circle cx="290" cy="414" r="10"/><circle cx="214" cy="419" r="10"/><circle cx="251" cy="384" r="10"/><circle cx="193" cy="422" r="8"/><circle cx="285" cy="382" r="10"/></g><path d="M266 184 L288 56" stroke="#454f3d" stroke-width="15"/><path d="M263 183 L284 54" stroke="#75806b" stroke-width="4"/><ellipse cx="240" cy="170" rx="93" ry="20" fill="#f5e4cb" stroke="#8b654b" stroke-width="2"/><ellipse cx="240" cy="164" rx="88" ry="14" fill="#ead2ae" stroke="#8b654b" stroke-width="2"/><path d="M269 176 L273 152" stroke="#566148" stroke-width="13"/></g>
-<g transform="rotate(13 366 340)"><rect x="310" y="238" width="119" height="201" rx="25" fill="url(#can)"/><ellipse cx="370" cy="244" rx="53" ry="12" fill="#d9d8cb" stroke="#8c9285" stroke-width="2"/><ellipse cx="370" cy="244" rx="24" ry="6" fill="none" stroke="#8c9285" stroke-width="3"/><path d="M318 417 Q369 436 422 417" fill="none" stroke="#b13a28" stroke-width="3"/><text x="369" y="320" text-anchor="middle" fill="#fff4df" font-family="Georgia,serif" font-weight="bold" font-size="34" font-style="italic">Soda</text><text x="369" y="346" text-anchor="middle" fill="#ffe2ca" font-size="10" letter-spacing="3">SO SWEET</text><path d="M338 373 Q370 354 398 375 M339 385 Q370 366 399 387" fill="none" stroke="#f5c2a0" stroke-width="2"/></g>
-<g fill="#fffdf5" stroke="#d9d4bd" stroke-width="1.5"><path d="M119 413 l28 -10 21 13 -29 11Z"/><path d="M119 413 v27 l20 12 v-25Z"/><path d="M139 427 l29 -11 v27 l-29 9Z"/><path d="M168 449 l26 -8 18 12 -26 9Z"/><path d="M168 449 v24 l18 12 v-23Z"/><path d="M186 462 l26 -9 v24 l-26 8Z"/><path d="M394 166 l25 -8 20 12 -27 9Z"/><path d="M394 166 v24 l18 13 v-24Z"/><path d="M412 179 l27 -9 v23 l-27 10Z"/></g><path d="M96 244 Q57 184 109 137" stroke="#89967b" fill="none" stroke-width="1.5"/><path d="M98 140 l11 -3 -1 13" stroke="#89967b" fill="none" stroke-width="1.5"/><text x="50" y="279" fill="#8a937e" font-family="Georgia" font-size="14" transform="rotate(-12 50 279)">less sugar,</text><text x="57" y="299" fill="#8a937e" font-family="Georgia" font-style="italic" font-size="14" transform="rotate(-12 57 299)">more life.</text></svg>
+<svg viewBox="0 0 640 640" role="img" aria-label="暖色立体插画：珍珠奶茶、可乐与方糖" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <radialGradient id="hero-halo"><stop stop-color="#fff9e9"/><stop offset="1" stop-color="#f0dfbf"/></radialGradient>
+  <linearGradient id="hero-tea" x1="0" x2="1"><stop stop-color="#ae7144"/><stop offset=".27" stop-color="#dfb780"/><stop offset=".65" stop-color="#f0d3a7"/><stop offset="1" stop-color="#b98250"/></linearGradient>
+  <linearGradient id="hero-glass" x1="0" x2="1"><stop stop-color="#fff9e7" stop-opacity=".6"/><stop offset=".45" stop-color="#fff9e7" stop-opacity=".05"/><stop offset="1" stop-color="#fff9e7" stop-opacity=".4"/></linearGradient>
+  <linearGradient id="hero-cola" x1="0" x2="1"><stop stop-color="#a93625"/><stop offset=".22" stop-color="#df5638"/><stop offset=".54" stop-color="#ed7450"/><stop offset=".83" stop-color="#d44c32"/><stop offset="1" stop-color="#b53c29"/></linearGradient>
+  <linearGradient id="hero-metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff8df"/><stop offset=".35" stop-color="#d9d9c6"/><stop offset=".68" stop-color="#f4eed8"/><stop offset="1" stop-color="#a9b29c"/></linearGradient>
+  <linearGradient id="hero-straw" x1="0" x2="1"><stop stop-color="#475e46"/><stop offset=".45" stop-color="#809472"/><stop offset="1" stop-color="#4f644b"/></linearGradient>
+  <radialGradient id="hero-pearl" cx=".32" cy=".25"><stop stop-color="#79553a"/><stop offset=".65" stop-color="#493121"/><stop offset="1" stop-color="#35261d"/></radialGradient>
+  <filter id="hero-soft-shadow" x="-50%" y="-100%" width="200%" height="300%"><feGaussianBlur stdDeviation="11"/></filter>
+  <clipPath id="hero-cup-clip"><path d="M159 229H348L321 500Q256 528 189 500Z"/></clipPath>
+ </defs>
+ <circle cx="317" cy="331" r="252" fill="url(#hero-halo)"/>
+ <circle cx="317" cy="331" r="274" fill="none" stroke="#c7b58e" stroke-opacity=".5" stroke-dasharray="2 11"/>
+ <path d="M102 235C111 178 147 131 196 109M469 544C517 515 552 474 568 429" fill="none" stroke="#b1b895" stroke-width="2" stroke-linecap="round"/>
+ <ellipse cx="331" cy="531" rx="190" ry="23" fill="#8f603c" opacity=".2" filter="url(#hero-soft-shadow)"/>
+ <g transform="rotate(-9 260 346)">
+  <rect x="276" y="91" width="17" height="157" rx="5" fill="url(#hero-straw)"/>
+  <path d="M281 100V223" stroke="#b0bd93" stroke-opacity=".65" stroke-width="3" stroke-linecap="round"/>
+  <path d="M159 229H348L321 500Q256 528 189 500Z" fill="url(#hero-tea)" stroke="#ad8057" stroke-width="2"/>
+  <g clip-path="url(#hero-cup-clip)">
+   <path d="M155 234H351L343 292Q249 311 164 290Z" fill="#efd3a7"/>
+   <path d="M168 296Q249 312 340 296" fill="none" stroke="#fff0d2" stroke-width="6" opacity=".8"/>
+   <g fill="#fff3d7" fill-opacity=".25" stroke="#fff5de" stroke-opacity=".4" stroke-width="2">
+    <rect x="185" y="251" width="39" height="31" rx="7" transform="rotate(14 204 266)"/>
+    <rect x="257" y="254" width="45" height="33" rx="7" transform="rotate(-12 279 270)"/>
+   </g>
+   <path d="M194 505Q189 472 221 447T265 466T313 441" fill="none" stroke="#946039" stroke-width="14" stroke-opacity=".22"/>
+   <g fill="url(#hero-pearl)">
+    <circle cx="210" cy="478" r="13"/><circle cx="237" cy="492" r="14"/><circle cx="268" cy="478" r="13"/>
+    <circle cx="295" cy="489" r="15"/><circle cx="313" cy="468" r="12"/><circle cx="260" cy="508" r="12"/>
+    <circle cx="200" cy="504" r="12"/><circle cx="231" cy="458" r="11"/><circle cx="288" cy="450" r="11"/>
+   </g>
+   <g fill="#c2986b" opacity=".5"><ellipse cx="207" cy="474" rx="4" ry="2.5"/><ellipse cx="264" cy="474" rx="4" ry="2.5"/><ellipse cx="291" cy="485" rx="4" ry="2.5"/></g>
+   <path d="M172 252L199 485" stroke="#fff9df" stroke-width="10" opacity=".28" stroke-linecap="round"/>
+   <path d="M334 256L313 472" stroke="#fff9df" stroke-width="4" opacity=".22" stroke-linecap="round"/>
+   <path d="M159 229H348L321 500Q256 528 189 500Z" fill="url(#hero-glass)"/>
+  </g>
+  <path d="M155 226Q253 244 352 226L349 241Q253 261 158 241Z" fill="#dfc498" stroke="#a77d56" stroke-width="2"/>
+  <ellipse cx="253" cy="227" rx="101" ry="22" fill="#fff1d2" stroke="#ac855b" stroke-width="2"/>
+  <ellipse cx="253" cy="223" rx="94" ry="16" fill="#ead0a2" stroke="#fdf0d4" stroke-width="3"/>
+  <ellipse cx="286" cy="224" rx="12" ry="4" fill="#c3ac7d"/>
+  <path d="M276 209V231H293V209" fill="url(#hero-straw)"/>
+  <g transform="rotate(2 255 367)">
+   <rect x="199" y="333" width="113" height="79" rx="8" fill="#fff4db" fill-opacity=".94"/>
+   <path d="M216 350H295" stroke="#c8a674" stroke-width="1"/>
+   <text x="255" y="374" text-anchor="middle" fill="#77553a" font-family="Georgia,serif" font-size="23" letter-spacing="2">MILK TEA</text>
+   <text x="255" y="395" text-anchor="middle" fill="#a58255" font-family="sans-serif" font-size="8" letter-spacing="2">A LITTLE LESS SWEET</text>
+  </g>
+ </g>
+ <g transform="rotate(11 414 416)">
+  <path d="M354 315Q353 304 373 302H457Q477 304 477 315L482 507Q483 527 461 532H373Q351 529 350 510Z" fill="url(#hero-cola)"/>
+  <path d="M369 323L365 500" stroke="#ffbd90" stroke-width="9" opacity=".24" stroke-linecap="round"/>
+  <path d="M469 324L474 500" stroke="#84291d" stroke-width="5" opacity=".2" stroke-linecap="round"/>
+  <ellipse cx="415" cy="309" rx="62" ry="15" fill="url(#hero-metal)" stroke="#a0a88f" stroke-width="2"/>
+  <ellipse cx="415" cy="308" rx="54" ry="10" fill="none" stroke="#a8af9a" stroke-width="1.5"/>
+  <ellipse cx="429" cy="309" rx="13" ry="5" fill="#798a75"/>
+  <path d="M396 301Q391 295 401 293L419 295Q425 298 418 303L405 306Z" fill="#e7e7d1" stroke="#8e9b85" stroke-width="2"/>
+  <path d="M354 389Q412 362 479 383L479 398Q420 380 353 408Z" fill="#ffecd0" opacity=".92"/>
+  <text x="415" y="453" text-anchor="middle" fill="#fff3db" font-family="Georgia,serif" font-size="43" font-style="italic" font-weight="bold" letter-spacing="-2">Cola</text>
+  <text x="415" y="477" text-anchor="middle" fill="#ffdec2" font-family="sans-serif" font-size="9" letter-spacing="3">SWEET MOMENTS</text>
+  <path d="M361 514Q415 535 472 515" stroke="#8e2b20" fill="none" stroke-width="3" opacity=".45"/>
+  <path d="M368 524Q414 539 462 525" stroke="#ec9b6e" fill="none" stroke-width="2" opacity=".55"/>
+  <g fill="#fff4dc" fill-opacity=".35" stroke="#ffe6c7" stroke-opacity=".3">
+   <ellipse cx="370" cy="353" rx="3" ry="5"/><ellipse cx="453" cy="346" rx="4" ry="6"/>
+   <ellipse cx="465" cy="413" rx="2.5" ry="4"/><ellipse cx="366" cy="463" rx="2" ry="3"/>
+   <ellipse cx="449" cy="493" rx="3" ry="4"/><circle cx="391" cy="335" r="2"/>
+  </g>
+ </g>
+ <g stroke="#d6c5a1" stroke-width="1.5" stroke-linejoin="round">
+  <path d="M119 511L150 498L178 515L146 528Z" fill="#fffdf1"/><path d="M119 511V544L146 561V528Z" fill="#f0e4ca"/><path d="M146 528L178 515V547L146 561Z" fill="#fff5df"/>
+  <path d="M181 551L207 542L230 556L204 568Z" fill="#fffdf1"/><path d="M181 551V578L204 592V568Z" fill="#eadabd"/><path d="M204 568L230 556V582L204 592Z" fill="#fff3d8"/>
+  <path d="M475 225L501 216L524 230L498 241Z" fill="#fffdf1"/><path d="M475 225V252L498 266V241Z" fill="#f0e4ca"/><path d="M498 241L524 230V256L498 266Z" fill="#fff5df"/>
+ </g>
+ <g fill="#b49a6b" opacity=".55"><circle cx="124" cy="359" r="3"/><circle cx="513" cy="306" r="3"/><circle cx="187" cy="169" r="2"/></g>
+ <g fill="none" stroke="#9fa984" stroke-width="2" stroke-linecap="round"><path d="M113 428V442M106 435H120M471 167V179M465 173H477"/></g>
+</svg>
 <div class="art-tag">一瓶 500ml 可乐 ≈<br><strong>53<span style="font-size:17px">g</span></strong> 糖</div><div class="art-note">甜蜜的背后，藏着多少糖？</div></div></div></div>
 <div class="ticker"><span>看见 <b>INVISIBLE SUGAR</b></span><span>理解 · 每一口甜的分量</span><span>选择 · 更轻盈的日常</span><span>LESS SUGAR, <b>MORE LIFE</b></span></div>
 <div class="wrap"><section id="data"><div class="section-top"><div><div class="kicker"><span>01 /</span> 数据观察</div><h2>关于糖的故事，<br>从一组数据开始。</h2></div><p class="lead">文稿从糖尿病数据切入，提醒我们关注日常饮食与代谢健康。糖尿病受多种因素影响，不能简单归因于“吃糖”。</p></div><div class="chart-panel"><div class="chart-tabs" role="tablist" aria-label="数据图表"><button id="trend-tab" role="tab" aria-selected="true" aria-controls="trend" tabindex="0">患者数量趋势</button><button id="age-tab" role="tab" aria-selected="false" aria-controls="age" tabindex="-1">患病年龄结构</button></div><div id="trend" role="tabpanel" aria-labelledby="trend-tab"><div class="chart-content"><div class="chart-copy"><div class="big-number">1.4<small>亿</small></div><div><h3>文稿中的 2023 年参考值</h3><p>把变化放进时间里，<br>看见健康议题的分量。</p></div></div><div><svg class="chart" viewBox="0 0 640 250" role="img" aria-label="文稿参考数据：2015年0.9亿，2017年1.0亿，2019年1.1亿，2021年1.3亿，2023年1.4亿"><defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#dc6545" stop-opacity=".18"/><stop offset="1" stop-color="#dc6545" stop-opacity="0"/></linearGradient></defs><g stroke="#d3d7c9" stroke-dasharray="3 5"><path d="M40 45H610 M40 95H610 M40 145H610 M40 195H610"/></g><text x="0" y="20">亿人</text><text x="7" y="49">1.5</text><text x="7" y="99">1.3</text><text x="7" y="149">1.1</text><text x="7" y="199">0.9</text><path d="M65 195L195 170L325 145L455 95L585 70V215H65Z" fill="url(#area)"/><path d="M65 195L195 170L325 145L455 95L585 70" fill="none" stroke="#df553a" stroke-width="3"/><g id="chart-points"></g><g text-anchor="middle"><text x="65" y="240">2015</text><text x="195" y="240">2017</text><text x="325" y="240">2019</text><text x="455" y="240">2021</text><text x="585" y="240">2023</text></g></svg><div id="chart-readout" class="chart-readout" aria-live="polite">点击圆点，查看年份与数值</div></div></div><p class="note">数据说明：以上数值来自所提供文稿（2015—2023 年：0.9、1.0、1.1、1.3、1.4 亿），尚未提供原始统计出处，首版仅作图表演示，不作为已核实统计结论。</p></div><div id="age" role="tabpanel" aria-labelledby="age-tab" hidden></div></div></section>
@@ -170,10 +285,17 @@ document.querySelectorAll('.guide-card').forEach((card,i)=>{card.querySelector('
 const commitments=['下一杯少加糖','用白水换甜饮','购物先看配料表','今天早点睡'];
 scenes[5].insertAdjacentHTML('beforeend',`<div class="commitment"><h3>今天，先选一件小事</h3><div class="commit-options">${commitments.map((text,i)=>`<button data-commit="${i}" aria-pressed="false">${text}</button>`).join('')}</div></div>`);
 scenes[6].querySelector('.primary').remove();
-scenes[6].querySelector('h2').insertAdjacentHTML('afterend','<div class="promise-card"><small>MY LITTLE CHANGE / 我的小小改变</small><p id="my-promise" aria-live="polite">下一杯，少一点糖。</p><span>不求一次改变所有习惯，只把这一个选择放进日常。</span></div>');
-scenes[6].insertAdjacentHTML('beforeend','<div class="closing-links"><a class="primary" href="#guide">再选一个小改变 <span>↗</span></a><a href="#top">重新看看这杯甜 ↺</a></div>');
+const actionDetails=[
+ ['点单时','选择较低甜度，少加珍珠、布丁等甜味小料。'],
+ ['补水时','把水杯放在手边，让白水或无糖茶成为日常选择。'],
+ ['购物时','比较同类产品，结合营养标签和包装容量看分量。'],
+ ['休息时','给规律作息留出时间，从今天能做的小调整开始。']
+];
+const actionIcons=[planArt[0],'<circle cx="90" cy="90" r="68" fill="#d7e0c5"/><path d="M52 45H128L117 143Q90 151 63 143Z" fill="#f9f5e8" stroke="#7b9473" stroke-width="3"/><path d="M58 84Q77 76 94 85T123 84L117 143Q90 151 63 143Z" fill="#adc5ae"/><path d="M71 91L76 129" stroke="#e7efdc" stroke-width="5" stroke-linecap="round"/><ellipse cx="90" cy="45" rx="38" ry="7" fill="#fff9ed" stroke="#7b9473" stroke-width="3"/>',planArt[2],planArt[3]];
+scenes[6].querySelector('h2').insertAdjacentHTML('afterend',`<div class="action-board" aria-label="四个日常小改变">${commitments.map((text,i)=>`<article class="action-card" data-action-index="${i}"><svg viewBox="0 0 180 180" aria-hidden="true">${actionIcons[i]}</svg><div class="action-copy"><span class="action-moment">0${i+1} / ${actionDetails[i][0]}</span><h3>${text}</h3><p>${actionDetails[i][1]}</p></div></article>`).join('')}</div>`);
+scenes[6].insertAdjacentHTML('beforeend','<div class="closing-links"><a class="primary" href="#guide">回顾控糖办法 <span>↗</span></a><a href="#top">重新看看这杯甜 ↺</a></div>');
 scenes[6].append(footer);
-document.querySelectorAll('[data-commit]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-commit]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));document.getElementById('my-promise').textContent=commitments[Number(button.dataset.commit)]+'。';}));
+document.querySelectorAll('[data-commit]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-commit]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));}));
 const bridges=[null,['从数据回到生活','那些日常喝下的甜，到底藏在哪里？','看看饮品里藏了多少糖','drinks'],['看见糖之后','短暂的甜蜜，会留下怎样的影响？','听听身体发出的信号','impact'],['理解负担，也看见改变','减少一点多余的糖，生活会有什么不同？','找回刚刚好的甜','benefits'],['知道为什么，更要知道怎么做','不靠苛刻节食，从今天就能做的事开始。','找到适合我的控糖办法','guide'],['把方法变成自己的选择','选好一件小事，就把它带进日常。','带上我的小改变','closing']];
 bridges.forEach((bridge,i)=>{if(bridge)scenes[i].insertAdjacentHTML('beforeend',`<div class="story-exit"><div><small>${bridge[0]}</small><p>${bridge[1]}</p></div><a class="story-link" href="#${bridge[3]}">${bridge[2]}<span class="arrow">↗</span></a></div>`);});
 document.querySelector('.to-top').remove();
@@ -349,16 +471,16 @@ quiz.querySelectorAll('[data-question]').forEach(b=>b.addEventListener('click',(
 const enrichedExamples=['先比较同类产品的糖量<br>奶茶少加糖、少加甜味小料','每天鲜果 200–350g<br>每天新鲜蔬菜不少于 300g','先看标示单位，再核对容量<br>总糖不自动等于添加糖','每周中等强度活动累计 ≥150 分钟<br>减少久坐，每小时起身活动'];
 document.querySelectorAll('.guide-example').forEach((el,i)=>el.innerHTML=enrichedExamples[i]);
 scenes[5].querySelector('h2').textContent='让方法落到一天里的三个时刻。';
-scenes[5].querySelector('.lead').textContent='先点开方案，再选一件今天能做的小事。数量建议来自中国膳食指南，特殊需求请按个人专业方案调整。';
+scenes[5].querySelector('.lead').textContent='点开方案了解做法，四个小改变都可以带进日常。数量建议来自中国膳食指南，特殊需求请按个人专业方案调整。';
 document.querySelector('.commitment').insertAdjacentHTML('beforebegin','<div class="routine-strip"><div><b>早餐时</b><p>看看酸奶与麦片的配料，给原味选择一个机会。</p></div><div><b>点单时</b><p>先选容量与甜度，再决定是否要加甜味小料。</p></div><div><b>购物时</b><p>同类产品一起比较，核对每份和每 100g/ml。</p></div></div>');
 document.querySelector('.guide>.note').innerHTML=`运动指南同时建议每周至少 5 天中等强度活动。${referenceLink('diet','膳食与活动建议')}`;
 
 // Closing: a reader can check what they have actually learned.
 scenes[6].querySelector('h2').innerHTML='把看见的糖，<br>变成一个更好的选择。';
-scenes[6].querySelector(':scope>p').innerHTML='不用一次改变所有习惯。<br>记住糖的口径、看懂整瓶分量，再选择适合自己的日常做法。';
+scenes[6].querySelector(':scope>p').innerHTML='四个小改变，都在这里。<br>从适合自己的那一件开始，慢慢放进日常。';
 document.querySelector('.closing-links').insertAdjacentHTML('beforebegin','<div class="review-strip"><label><input type="checkbox" data-review>我能区分添加糖与游离糖</label><label><input type="checkbox" data-review>我会按容量换算整瓶糖量</label><label><input type="checkbox" data-review>我选好了一件今天要做的小事</label><output id="review-result" aria-live="polite">阅读自查 0 / 3</output></div>');
 document.querySelectorAll('[data-review]').forEach(input=>input.addEventListener('change',()=>{document.getElementById('review-result').textContent=`阅读自查 ${document.querySelectorAll('[data-review]:checked').length} / 3`;}));
-footer.innerHTML='交互科普 · 内容查阅于 2026 年 11 月 3 日<br>资料：WHO、中国居民膳食指南、FDA；饮品示例来自原文估算。<br>仅供科普参考，不能替代专业医疗建议。';
+footer.innerHTML='交互科普<br>资料：WHO、中国居民膳食指南、FDA；饮品示例来自原文估算。<br>仅供科普参考，不能替代专业医疗建议。';
 
 </script>
 </body></html>
